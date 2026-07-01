@@ -16,8 +16,6 @@ A web-based medical question-answering chatbot powered by **Retrieval-Augmented 
 - **LLM:** Grok (Llama 3.3 70B)
 - **Frontend:** HTML, Bootstrap, jQuery
 
-## Project Structure
-
 ## Setup
 
 1. **Clone the repository**
