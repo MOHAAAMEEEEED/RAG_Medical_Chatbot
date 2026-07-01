@@ -41,26 +41,26 @@ index = pc.Index(index_name)
 
 
 
-# Load Existing index 
+
+
+# create a new index
+docsearch = PineconeVectorStore.from_documents(
+    documents=texts_chunk,
+    embedding=embedding,
+    index_name=index_name
+)
+
+
+
+"""
+if you want to create a new index, to load existing index use the below code and comment the above code.
+if you want to load existing index, use the following code:
+
 from langchain_pinecone import PineconeVectorStore
 # Embed each chunk and upsert the embeddings into your Pinecone index.
 docsearch = PineconeVectorStore.from_existing_index(
     index_name=index_name,
     embedding=embedding
-)
-
-
-
-
-
-"""
-I made an index before so i loaded it from existing index, if you want to create a new index, use the below code and comment the above code.
-if you want to save a new index, use the following code:
-
-docsearch = PineconeVectorStore.from_documents(
-    documents=texts_chunk,
-    embedding=embedding,
-    index_name=index_name
 )
 
 """
